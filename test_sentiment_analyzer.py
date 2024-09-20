@@ -8,17 +8,17 @@ class test_sentiment_analyzer(unittest.TestCase):
         # Test case for positive sentiment
         # test when 'I love working with Python' is sent as input, it is labeled as 'SENT_POSITIVE'
         result_1 = sentiment_analyzer('I love working with Python')
-        self.assertEqual(label['label'], 'SENT_POSITIVE') 
+        self.assertEqual(result_1['label'], 'SENT_POSITIVE') 
 
         # Test case for negative sentiment
         # test when 'I hate working with Python' is sent as input, it is labeled as 'SENT_NEGATIVE'
         result_2 = sentiment_analyzer('I hate working with Python')
-        self.assertNotEqual(label['label'], 'SENT_NEGATIVE') 
+        self.assertNotEqual(result_2['label'], 'SENT_NEGATIVE') 
 
         # Test case for neutral sentiment
         # test when 'I am neutral on Python' is sent as input, it is labed as 'SENT_NEUTRAL'
         result_3 = sentiment_analyzer('I am neutral on Python')
-        self.assertLessEqual(label['label'], 'SENT_NEUTRAL') 
+        self.assertLessEqual(result_3['label'], 'SENT_NEUTRAL') 
 
 # Run all the test cases defined in the module when the script is executed
 # This will automatically discover and run all the test cases defined in the module
