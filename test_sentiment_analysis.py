@@ -1,5 +1,5 @@
 from SentimentAnalysis.sentiment_analysis import sentiment_analyzer # Import sentiment_analyzer from the SentimentAnalysis package
-import unittest # Import the unnittest library
+import unittest # Import the unittest library
 
 # Define a test case class for testing the sentiment_analyzer
 class test_sentiment_analyzer(unittest.TestCase):
