@@ -11,6 +11,9 @@ from SentimentAnalysis.sentiment_analysis import sentiment_analyzer
 # Initiate the flask app
 app = Flask("Sentiment Analyzer")
 
+# Defines a function with two purposes
+# 1: Sends a GET request to the HTML interface to receive the input text
+# 2: Calls the 'sentiment_analyzer' application with 'text_to_analyze' as an argument
 @app.route("/sentimentAnalyzer")
 def sent_analyzer():
     ''' This code receives the text from the HTML interface and 
