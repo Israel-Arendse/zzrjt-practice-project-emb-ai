@@ -6,6 +6,7 @@
 from flask Import Flask, render_template, request
 
 # Import the sentiment_analyzer function from the package created: TODO
+from SentimentAnalysis.sentiment_analysis import sentiment_analyzer
 
 #Initiate the flask app : TODO
 
