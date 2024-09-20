@@ -29,7 +29,7 @@ def sent_analyzer():
     score = response['score']
 
     # Return a formmatted string with the sentiment label and score
-    return "The given text has been identified as {} with a score of {}.".format(label.split('_'[1], score))
+    return "The given text has been identified as {} with a score of {}.".format(label.split('_')[1], score)
 
 @app.route("/")
 def render_index_page():
