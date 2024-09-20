@@ -19,3 +19,7 @@ class test_sentiment_analyzer(unittest.TestCase):
         # test when 'I am neutral on Python' is sent as input, it is labed as 'SENT_NEUTRAL'
         result_3 = sentiment_analyzer('I am neutral on Python')
         self.assertLessEqual(label['label'], 'SENT_NEUTRAL') 
+
+# Run all the test cases defined in the module when the script is executed
+# This will automatically discover and run all the test cases defined in the module
+unittest.main()
