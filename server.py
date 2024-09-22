@@ -33,7 +33,7 @@ def sent_analyzer():
 
      # Check if the label is None, indicating an error or invalid input
     if label is None:
-        return "Invalid input! Try againa1"
+        return "Invalid input! Try again."
     
     else:
          # Return a formmatted string with the sentiment label and score
