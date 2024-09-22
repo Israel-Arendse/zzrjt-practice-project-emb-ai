@@ -12,9 +12,14 @@ def sentiment_analyzer(text_to_analyse): # Define the function 'sentiment_analyz
     # Parse the JSON response
     formatted_response = json.loads(response.text)
 
-    # Extract the  label and score
-    label = formatted_response['documentSentiment']['label']
-    score = formatted_response['documentSentiment']['score']
+    # If the response status code is 200, extract the label and score from the response
+    if response.status_code == 200:
+        label = formatted_response['documentSentiment']['label']
+        score = formatted_response['documentSentiment']['score']
+    # If the response status code is 500, set label and score to None
+    elif response.status_code == 500:
+        label = None
+        score = None
 
     # Return turn a dictionary with label and score
     return {'label': label, 'score': score}
