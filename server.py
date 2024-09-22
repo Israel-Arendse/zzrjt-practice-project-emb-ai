@@ -31,8 +31,8 @@ def sent_analyzer():
     response = sentiment_analyzer(text_to_analyze)
 
     # Extract the label and score from the response
-    label = response['label']
-    score = response['score']
+    label = response('label')
+    score = response('score')
 
     # Check if the label is None, indicating an error or invalid input
     if label is None:
