@@ -18,8 +18,10 @@ app = Flask("Sentiment Analyzer")
 def sent_analyzer():
     ''' This code receives the text from the HTML interface and 
         runs sentiment analysis over it using sentiment_analysis()
-        function. The output returned shows the label and its confidence 
-        score for the provided text.
+        function. The code uses an 'if' and 'elif' function to check
+        if the input is valid. The output returned shows the label and 
+        its confidence score for the provided text. If the input is invalid 
+        then the output returns the message 'Invalid input! Try again.'
     '''
     # Retrieve the text to analyze from the requests arguments
     text_to_analyze = request.args.get('textToAnalyze')
