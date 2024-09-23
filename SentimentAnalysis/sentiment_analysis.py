@@ -30,8 +30,11 @@ def sentiment_analyzer(text_to_analyse):
     header = {"grpc-metadata-mm-model-id": "sentiment_aggregated-bert-workflow_lang_multi_stock"}
 
     # Send a POST request to the API with the text and headers
-    response = requests.post(url, json = myobj, headers=header)
-
+    try:
+        response = requests.post(url, json = myobj, headers=header, timeout=5)
+    except requests.exceptions.Timeout:
+        # End  connection and retry
+        print("Request timed out!")
     # Parse the JSON response
     formatted_response = json.loads(response.text)
 
