@@ -42,10 +42,17 @@ def sentiment_analyzer(text_to_analyse):
     if response.status_code == 200:
         label = formatted_response['documentSentiment']['label']
         score = formatted_response['documentSentiment']['score']
-    # If the response status code is 500, set label and score to None
+    # Determines the label based on the sentiment detected in the text
+        if label == 'positive':
+            print("Positive sentiment detected.")
+        elif label == 'negative':
+            print("Negative sentiment detected.")
+        else:
+            print("Neutral sentiment detected.")
+    # If the response status code is 500, set the label and score to None
     elif response.status_code == 500:
         label = None
         score = None
-
-    # Return turn a dictionary with label and score
+        print("Internal server error. Please try again later.")
+    # Returns a dictionary with the key-value pairs 'label' and 'score'
     return {'label': label, 'score': score}
