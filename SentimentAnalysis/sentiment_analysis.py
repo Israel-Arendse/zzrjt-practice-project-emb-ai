@@ -21,7 +21,8 @@ def sentiment_analyzer(text_to_analyse):
      dictionary: The type of sentiment in the text and its score.
     '''
     # Define URL for the sentiment analysis service
-    url ='https://sn-watson-sentiment-bert.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/SentimentPredict'
+    url =('https://sn-watson-sentiment-bert.labs.skills.network/v1/'
+          'watson.runtime.nlp.v1/NlpService/SentimentPredict')
 
     # Create the payload with the text to be analyzed
     myobj = {"raw_document": {"text": text_to_analyse}}
