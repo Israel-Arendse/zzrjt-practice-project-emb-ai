@@ -1,10 +1,15 @@
+''' Executing this code activates the sentiment_analyer code
+    and imports the JSON library and the third-party library 
+    requests.
+'''
+
 import json      # Import the JSON library
 import requests  # Import the requests library to handle HTTP requests
-    
+
 # Define the function 'sentiment_analyzer' to take the string input (text_to_analyse)
-def sentiment_analyzer(text_to_analyse): 
+def sentiment_analyzer(text_to_analyse):
     # Define URL for the sentiment analysis service
-    url ='https://sn-watson-sentiment-bert.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/SentimentPredict'  
+    url ='https://sn-watson-sentiment-bert.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/SentimentPredict'
 
     # Create the payload with the text to be analyzed
     myobj = {"raw_document": {"text": text_to_analyse}}
