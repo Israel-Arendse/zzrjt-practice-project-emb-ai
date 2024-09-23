@@ -47,7 +47,7 @@ def render_index_page():  # Runs the 'render_template' function in the 'index.ht
     ''' This function initiates the rendering of the main application
         page over the Flask channel
     '''
-    return render_template("index.html") 
+    return render_template("index.html")
 
 # Runs the Flask app
 if __name__ == "__main__":
