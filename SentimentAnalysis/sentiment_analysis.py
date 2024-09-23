@@ -29,6 +29,10 @@ def sentiment_analyzer(text_to_analyse):
     # Set the headers required for the API request
     header = {"grpc-metadata-mm-model-id": "sentiment_aggregated-bert-workflow_lang_multi_stock"}
 
+    # Initialize label and score with default values
+    label = None
+    score = None
+    
     # Send a POST request to the API with the text and headers
     try:
         response = requests.post(url, json = myobj, headers=header, timeout=5)
